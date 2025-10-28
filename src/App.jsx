@@ -1,5 +1,13 @@
-const App = () => {
-  return <div className="text-white bg-blue-500 text-2xl p-4">App</div>;
-};
+import Header from "./components/Header"
 
-export default App;
+const App = () => {
+  return (
+    <div className="min-h-screen overflow-clip">
+      <Header />
+
+      <main></main>
+    </div>
+  )
+}
+
+export default App
