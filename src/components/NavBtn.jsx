@@ -1,5 +1,3 @@
-import React from "react";
-
 const NavBtn = ({ children, hoverText = "Explore", active = false }) => {
   return (
     <a
@@ -39,11 +37,14 @@ const NavBtn = ({ children, hoverText = "Explore", active = false }) => {
         </span>
       </span>
 
-      {/* Underline hand-drawn style */}
+      {/* ✍️ Active underline / hover underline */}
       <span
-        className="absolute bottom-[4px] left-1/2 -translate-x-1/2 w-0 h-[2px] 
-        bg-gradient-to-r from-pink-400 to-blue-400 
-        rounded-full transition-all duration-500 group-hover:w-4/5"
+        className={`absolute bottom-[4px] left-1/2 -translate-x-1/2 h-[2px] 
+        rounded-full transition-all duration-500
+        ${active
+          ? "w-4/5 bg-gradient-to-r from-pink-400 to-blue-400 shadow-[0_0_8px_rgba(236,72,153,0.6)]"
+          : "w-0 bg-gradient-to-r from-pink-400 to-blue-400 group-hover:w-4/5"
+        }`}
       ></span>
     </a>
   );

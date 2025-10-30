@@ -1,4 +1,4 @@
-import React from 'react'
+import Magnet from '../reactbits.dev/Magnet'
 import NavBtn from './NavBtn'
 import { Menu, Phone } from 'lucide-react'
 
@@ -14,12 +14,12 @@ const Header = () => {
 
         {/* Desktop nav */}
         <nav className='hidden lg:flex items-center space-x-8'>
-          <NavBtn hoverText='Home'>Home</NavBtn>
+          <NavBtn hoverText='Home' active>Home</NavBtn>
           <NavBtn hoverText='About'>About</NavBtn>
           <NavBtn hoverText='Gallery'>Gallery</NavBtn>
           <NavBtn hoverText='Service'>Service</NavBtn>
 
-          <button className='flex items-center space-x-2 bg-zinc-900 text-white text-sm py-4 px-6 rounded-full cursor-pointer transition-all duration-150 ease-in ml-4 hover:bg-transparent border border-zinc-900 hover:text-zinc-900'>
+          <button className='flex items-center space-x-2 bg-zinc-900 text-white text-sm py-4 px-6 rounded-full cursor-pointer transition-all duration-150 ease-in ml-4 hover:bg-transparent border border-zinc-900 hover:text-zinc-900 hover:animate-wiggle'>
             <Phone size={16} />
             <span>Contact Us</span>
           </button>
